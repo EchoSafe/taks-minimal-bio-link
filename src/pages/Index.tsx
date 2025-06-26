@@ -1,4 +1,5 @@
 import { Github, Youtube, BookOpen } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Index = () => {
   const socialLinks = [
@@ -83,17 +84,28 @@ const Index = () => {
             </a>
           ))}
         </div>
-          <div className="mt-10">
-        <a href="https://holopin.io/@karitthorn" target="_blank" rel="noopener noreferrer">
-  <img src="https://holopin.me/karitthorn" alt="An image of @karitthorn's Holopin badges, which is a link to view their full Holopin profile" className="rounded-2xl"/>
-</a>
-</div>
+        <div className="mt-10">
+          <a
+            href="https://holopin.io/@karitthorn"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="https://holopin.me/karitthorn"
+              alt="An image of @karitthorn's Holopin badges, which is a link to view their full Holopin profile"
+              className="rounded-2xl"
+            />
+          </a>
+        </div>
 
         {/* Footer */}
         <div className="text-center mt-12">
           <p className="text-gray-500 text-sm">
             Connect with me on social media
           </p>
+          <Link to="/a" className="text-blue-600 hover:text-blue-800">
+            🏆Achievements
+          </Link>
         </div>
       </div>
     </div>
