@@ -8,42 +8,38 @@ const Index = () => {
       description: "Check out my code repositories",
       url: "https://github.com/karitthorn",
       icon: <Github className="w-6 h-6" />,
-      bgColor: "bg-gray-800 hover:bg-gray-700"
+      bgColor: "bg-gray-900 hover:bg-gray-800"
     },
     {
       title: "Did I am a blogger?",
       description: "Read my articles and thoughts",
       url: "https://medium.com/@karitthorn",
       icon: <BookOpen className="w-6 h-6" />,
-      bgColor: "bg-green-700 hover:bg-green-600"
+      bgColor: "bg-green-600 hover:bg-green-700"
     },
     {
       title: "Did I am a youtuber?",
-      description: "Watch my video content",  
+      description: "Watch my video content",
       url: "https://www.youtube.com/@WelaDev",
       icon: <Youtube className="w-6 h-6" />,
-      bgColor: "bg-red-500 hover:bg-red-400"
+      bgColor: "bg-red-600 hover:bg-red-700"
     }
   ];
 
-  const handleLinkClick = (url: string) => {
-    window.open(url, '_blank', 'noopener,noreferrer');
-  };
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-white to-green-50 flex items-center justify-center p-4">
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center p-4">
       <div className="max-w-md w-full">
         {/* Profile Section */}
         <div className="text-center mb-12">
           <div className="relative inline-block mb-6">
-            <div className="w-32 h-32 bg-gradient-to-br from-green-400 to-green-600 rounded-full mx-auto flex items-center justify-center shadow-lg">
+            <div className="w-32 h-32 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full mx-auto flex items-center justify-center shadow-xl">
               <span className="text-4xl font-bold text-white">T</span>
             </div>
-            <div className="absolute -bottom-2 -right-2 w-8 h-8 bg-green-500 rounded-full border-4 border-white shadow-md"></div>
+            <div className="absolute -bottom-2 -right-2 w-8 h-8 bg-green-500 rounded-full border-4 border-white shadow-lg"></div>
           </div>
           
-          <h1 className="text-3xl font-bold text-gray-800 mb-2">
-            Hi I'm <span className="text-green-600">Tak</span>
+          <h1 className="text-3xl font-bold text-gray-900 mb-2">
+            Hi I'm <span className="text-blue-600">Tak</span>
           </h1>
           
           <p className="text-gray-600 text-lg mb-8">
@@ -54,10 +50,12 @@ const Index = () => {
         {/* Social Links */}
         <div className="space-y-4">
           {socialLinks.map((link, index) => (
-            <div
+            <a
               key={index}
-              onClick={() => handleLinkClick(link.url)}
-              className={`block w-full ${link.bgColor} text-white rounded-xl p-4 transition-all duration-300 transform hover:scale-105 hover:shadow-lg cursor-pointer group`}
+              href={link.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`block w-full ${link.bgColor} text-white rounded-xl p-4 transition-all duration-300 transform hover:scale-105 hover:shadow-lg group`}
             >
               <div className="flex items-center space-x-4">
                 <div className="flex-shrink-0 p-2 bg-white/20 rounded-lg group-hover:bg-white/30 transition-colors duration-300">
@@ -73,7 +71,7 @@ const Index = () => {
                   </svg>
                 </div>
               </div>
-            </div>
+            </a>
           ))}
         </div>
 
