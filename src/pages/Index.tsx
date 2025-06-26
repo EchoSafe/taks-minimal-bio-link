@@ -99,13 +99,16 @@ const Index = () => {
         </div>
 
         {/* Footer */}
-        <div className="text-center mt-12">
+        <div className="text-center mt-10">
+          <div className="mb-3">
+        <Link to="/a" className="text-blue-600 hover:text-blue-800  underline ">
+            🏆 My Achievements
+          </Link>
+          </div>
           <p className="text-gray-500 text-sm">
             Connect with me on social media
           </p>
-          <Link to="/a" className="text-blue-600 hover:text-blue-800">
-            🏆Achievements
-          </Link>
+
         </div>
       </div>
     </div>

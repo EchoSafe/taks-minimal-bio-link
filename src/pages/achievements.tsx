@@ -21,7 +21,7 @@ const achievements = [
     title: "Minecraft Hackathon Education Edition",
     awards: ["รางวัลชนะเลิศ"],
     prize: "10,000 บาท",
-    year: "2024",
+    year: "2022",
     tier: "gold",
     type: "Champion"
   },
