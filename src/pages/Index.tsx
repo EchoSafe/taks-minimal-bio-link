@@ -17,13 +17,7 @@ const Index = () => {
       icon: <BookOpen className="w-6 h-6" />,
       bgColor: "bg-green-600 hover:bg-green-700",
     },
-    {
-      title: "Did I am a youtuber?",
-      description: "Watch my video content",
-      url: "https://www.youtube.com/@WelaDev",
-      icon: <Youtube className="w-6 h-6" />,
-      bgColor: "bg-red-600 hover:bg-red-700",
-    },
+
   ];
 
   return (
@@ -99,7 +93,7 @@ const Index = () => {
         </div>
 
         {/* Footer */}
-        <div className="text-center mt-10">
+        {/* <div className="text-center mt-10">
           <div className="mb-3">
         <Link to="/a" className="text-blue-600 hover:text-blue-800  underline ">
             🏆 My Achievements
@@ -109,7 +103,7 @@ const Index = () => {
             Connect with me on social media
           </p>
 
-        </div>
+        </div> */}
       </div>
     </div>
   );
